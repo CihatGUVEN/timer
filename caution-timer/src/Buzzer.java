@@ -5,7 +5,17 @@ public class Buzzer {
     int level;
     boolean isActive;
 
-    public void run(int counter, int time) {
-        System.out.println("Bazer çalıştı");
+    public void run(int time) {
+        if (time == 5) {
+            System.out.println("Bazer 1. seviyede öttü");
+            return;
+        } else if (time == 10) {
+            System.out.println("Bazer 2. seviyede öttü");
+            return;
+        }
+        else if (time == 15) {
+        System.out.println("Bazer 3. seviyede öttü");
+        return;
+    }
     }
 }

@@ -3,16 +3,22 @@ public class Main {
         System.out.println("Hello world!");
 
         Timer timer = new Timer();
-        timer.updateLevels(10, 4 ,3);
+        timer.updateLevels(20, 4 ,3);
         try {
             timer.run();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
 
-        Thread.sleep(10000);
-
-
+        /*
+        
+         */
         timer.restartCounter();
+
+        try {
+            timer.run();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

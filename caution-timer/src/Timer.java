@@ -1,7 +1,7 @@
 public class Timer {
 
     // timer da bir tane sayaç çalışır. sayaç zamanla artar. Ve değerine göre bazer ve led i tetikler.
-
+int time= 0;
     int counter;
 
     Buzzer buzzer = new Buzzer();
@@ -14,11 +14,11 @@ public class Timer {
     }
 
     public void run() throws InterruptedException {
-        int time = 0;
+        time = 0;
         while(true){
             // işlemleri yap
-            buzzer.run(counter, time);
-            led.run(counter, time);
+            buzzer.run(time);
+            led.run(time);
             Thread.sleep(5000);
             time +=5;
 
@@ -28,6 +28,6 @@ public class Timer {
     }
 
     public void restartCounter(){
-        counter = 0;
+        time = 0;
     }
 }
